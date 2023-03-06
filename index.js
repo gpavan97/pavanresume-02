@@ -31,3 +31,13 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+// Contact Email 
+Email.send({
+  SecureToken : "173e66da-8295-48f2-8e50-23f2d4ccc689",
+  To : 'gudapatipavankalyan123@gmail.com',
+  From : "gudapatipavankalyan123@gmail.com",
+  Subject : "This is the subject",
+  Body : "And this is the body"
+}).then(
+message => alert(message)
+);
