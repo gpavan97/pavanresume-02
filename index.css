@@ -21,7 +21,6 @@ body {
 .Skills_headding {
    width: 100%;
    height: auto;
-   background-color: rgb(60, 255, 0);
 }
 
 .Skills_headding>h1 {
@@ -30,7 +29,7 @@ body {
    text-transform: capitalize;
    font-weight: bold;
    text-align: center;
-   color: #fff;
+   color: #000;
 }
 
 .skills_wrapper {
@@ -84,6 +83,36 @@ body {
 
 }
 
+/* Mobile view from Venkata Narendra */
+@media screen and (max-width: 860px) {
+   .skills_wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem 3rem;
+      justify-content: center;
+      color: #fff;
+      padding: 20px;
+      background-color: #000 !important;
+   }
+
+   .skills_box>h1 {
+      text-transform: uppercase;
+      text-align: -webkit-center;
+   }
+
+   .Skills_list {
+      width: 98%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      list-style: square;
+      gap: 1rem 1rem;
+      padding: 20px 0px;
+   }
+}
+
+/* pre-defind Css From W3school website  */
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html {
    box-sizing: border-box
