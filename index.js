@@ -32,12 +32,17 @@ window.onclick = function(event) {
   }
 }
 // Contact Email 
-Email.send({
-  SecureToken : "173e66da-8295-48f2-8e50-23f2d4ccc689",
-  To : 'gudapatipavankalyan123@gmail.com',
-  From : "gudapatipavankalyan123@gmail.com",
-  Subject : "This is the subject",
-  Body : "And this is the body"
-}).then(
-message => alert(message)
-);
+const sendmail = ()=>{
+  const name=document.getElementById("Name").value
+  const mail=document.getElementById("Mail").value
+  const message=document.getElementById("Message").value
+  Email.send({
+    SecureToken : "173e66da-8295-48f2-8e50-23f2d4ccc689",
+    To : 'gudapatipavankalyan123@gmail.com',
+    From : "gudapatipavankalyan123@gmail.com",
+    Subject : `Hello you Message from your website  with  this ${mail}`,
+    Body : `Hello pavan we have a new message from ${name}, message: ${message} `
+  }).then(
+  message => alert(message)
+  );
+}

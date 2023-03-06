@@ -85,6 +85,7 @@ body {
 
 /* Mobile view from Venkata Narendra */
 @media screen and (max-width: 860px) {
+
    .skills_wrapper {
       width: 100%;
       display: flex;
@@ -92,7 +93,7 @@ body {
       gap: 2rem 3rem;
       justify-content: center;
       color: #fff;
-      padding: 20px;
+      padding: 40px;
       background-color: #000 !important;
    }
 
