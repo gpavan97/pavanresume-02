@@ -36,13 +36,21 @@ const sendmail = ()=>{
   const name=document.getElementById("Name").value
   const mail=document.getElementById("Mail").value
   const message=document.getElementById("Message").value
-  Email.send({
-    SecureToken : "173e66da-8295-48f2-8e50-23f2d4ccc689",
-    To : 'gudapatipavankalyan123@gmail.com',
-    From : "gudapatipavankalyan123@gmail.com",
-    Subject : `Hello you Message from your website  with  this ${mail}`,
-    Body : `Hello pavan we have a new message from ${name}, message: ${message} `
-  }).then(
-  message => alert(message)
-  );
+  console.log(name,mail,message)
+  if(name===" "||mail===undefined||message===undefined){
+    document.getElementById("Email","Name","Message").style.border="1px solid red !important"
+  }else{
+    Email.send({
+      SecureToken : "173e66da-8295-48f2-8e50-23f2d4ccc689",
+      To : 'gudapatipavankalyan123@gmail.com',
+      From : "gudapatipavankalyan123@gmail.com",
+      Subject : `Hello you Message from your website  with  this ${mail}`,
+      Body : `Hello pavan we have a new message from ${name}, message: ${message} `
+    }).then(
+      setTimeout(()=>{
+      message => alert(message)
+    },3000)
+    );
+  }
 }
+  
